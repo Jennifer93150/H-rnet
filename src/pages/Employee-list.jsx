@@ -1,12 +1,12 @@
 /** components */
 import Navbar from "../components/Navbar";
-import DatasTable from "../components/DatasTable";
+import DataTable from "../components/DataTable";
 
 function EmployeeList() {
     return (
       <div>
         <Navbar/>
-        <DatasTable/>
+        <DataTable/>
       </div>
     );
 }

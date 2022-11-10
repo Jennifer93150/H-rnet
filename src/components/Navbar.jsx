@@ -5,10 +5,8 @@ export default function Navbar() {
   return (
     <div>
         <header className="home-header">
-        
-            <Link className="home-link fs-3 text" to="/">HRnet</Link>
-            <Link className="home-link fs-3 text" to="/employees">View Current Employees</Link>
-            
+          <Link className="home-link fs-3 text" to="/">HRnet</Link>
+          <Link className="home-link fs-3 text" to="/employees">View Current Employees</Link>
         </header>
     </div>
   )

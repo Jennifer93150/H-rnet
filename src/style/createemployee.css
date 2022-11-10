@@ -4,7 +4,7 @@ body {
 }
 
 .home-header{
-  background-color: #85b281;
+  background-color: #362144;
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -17,7 +17,7 @@ body {
 }
 
 .home-link:hover{
-  color: #61845e;
+  color: #6f587e;
 }
 
 .title {
@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  background-color: #85b281;
+  background-color: #362144;
   border-radius: 10px;
   box-shadow: 5px 5px 15px -5px #000000;
   display: flex;
@@ -48,4 +48,5 @@ label {
 .address {
   margin-top: 10px;
 }
+
 

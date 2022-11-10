@@ -5,14 +5,19 @@ import FormCreateEmployee from "../components/FormCreateEmployee";
 import Navbar from "../components/Navbar";
 
 /** styles */
-import "../style/createemployee.css";
+import "../style/createEmployee.css";
+import "../style/datePicker.css";
 
 export default function CreateEmployee() {
- 
+  
   return (
-    <div className="home">
-      <Navbar/>
-      <FormCreateEmployee/>
-    </div>
+    <main>
+      <div className="home">
+        <Navbar/>
+        <FormCreateEmployee/>
+      </div>
+    </main>
   );
 }
+
+

@@ -5,9 +5,6 @@ import {
   Route,
 } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
-import { PersistGate } from 'redux-persist/integration/react';
-import { Provider } from "react-redux";
-import { store , persistor } from "./redux/store";
 
 /** pages */
 import CreateEmployee from './pages/CreateEmployee';
@@ -17,16 +14,13 @@ import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
+
 root.render(
   <BrowserRouter>
-     <Provider store={store}> 
-        <PersistGate loading={null} persistor={persistor}>
-          <Routes>
-            <Route exact path="/" index element={<CreateEmployee/>}/>
-            <Route path="/employees" index element={<EmployeeList/>}/>
-          </Routes>
-      </PersistGate>
-     </Provider> 
+    <Routes>
+      <Route exact path="/" index element={<CreateEmployee/>}/>
+      <Route path="/employees" index element={<EmployeeList/>}/>
+    </Routes>
   </BrowserRouter>
 );
 
