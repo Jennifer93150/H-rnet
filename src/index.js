@@ -8,7 +8,7 @@ import { createRoot } from 'react-dom/client';
 
 /** pages */
 import CreateEmployee from './pages/CreateEmployee';
-import EmployeeList from './pages/Employee-list';
+import EmployeeList from './pages/EmployeeList';
 
 import reportWebVitals from './reportWebVitals';
 

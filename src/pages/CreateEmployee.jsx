@@ -1,22 +1,16 @@
 import { React } from "react";
 
 /** components */
-import FormCreateEmployee from "../components/FormCreateEmployee";
 import Navbar from "../components/Navbar";
-
-/** styles */
-import "../style/createEmployee.css";
-import "../style/datePicker.css";
+import Form from "../components/Form";
 
 export default function CreateEmployee() {
   
   return (
-    <main>
-      <div className="home">
+      <div className="body">
         <Navbar/>
-        <FormCreateEmployee/>
+        <Form/>
       </div>
-    </main>
   );
 }
 

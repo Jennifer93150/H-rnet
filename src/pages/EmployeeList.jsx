@@ -4,7 +4,7 @@ import DataTable from "../components/DataTable";
 
 function EmployeeList() {
     return (
-      <div>
+      <div className="body">
         <Navbar/>
         <DataTable/>
       </div>

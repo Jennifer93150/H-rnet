@@ -10,7 +10,10 @@ import { DatePicker } from "my-datepicker-test";
 /** components */
 import Modale from "./Modale";
 
-export default function FormCreateEmployee(){
+/** styles */
+import "../style/form.css";
+
+export default function Form(){
  
     const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -81,64 +84,63 @@ export default function FormCreateEmployee(){
     return (
         <div className="container">
             <h1>Create Employee</h1>
-            <form className="row g-2" action="#" id="createEmployee" onSubmit={handleSubmit}>
-                <div className="col-md-6">
-                    <label htmlFor="firstname" className="form-label">First Name</label>
-                    <input type="text" className="form-control" 
+            <form action="#" id="createEmployee" onSubmit={handleSubmit}>
+                <div >
+                    <label htmlFor="firstname" >First Name</label>
+                    <input type="text" 
                     id="firstname" name="firstname" placeholder="Lucie" 
                      onChange={(e)=>{handleEmployeeChange('firstName', e.target.value)}} required/>
                 </div>
-                <div className="col-md-6">
-                    <label htmlFor="lastname" className="form-label">Last Name</label>
-                    <input type="text" className="form-control" id="lastname" name="lastname" placeholder="Dupont" 
+                <div >
+                    <label htmlFor="lastname" >Last Name</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Dupont" 
                      onChange={(e)=>{handleEmployeeChange('lastName', e.target.value)}} required/>
                     
                 </div>
-                <div className="col-md-6">
-                    <label htmlFor="dateBirth" className="form-label">Date of birth</label>
+                <div >
+                    <label htmlFor="dateBirth" >Date of birth</label>
                     <DatePicker id="dateBirth" class="input-dateBirth"
                     onChange={(value)=>{handleEmployeeChange('dateBirth', value)}} 
                     onClick={(value)=>{handleClickOnADate('dateBirth', value)}}/>
                 </div>
-                <div className="col-md-6">
-                    <label htmlFor="startDate" className="form-label">Start date</label>
+                <div >
+                    <label htmlFor="startDate" >Start date</label>
                     <DatePicker id="startDate" class="input-startDate"
                     onChange={(value)=>{handleEmployeeChange('startDate', value)}} 
                     onClick={(value)=>{handleClickOnADate('startDate', value)}}/>
                 </div>   
-                <fieldset className="row g-2 address">
-                    <legend>Address</legend>
-                    <div className="col-md-6">
-                        <label htmlFor="street" className="form-label">Street</label>
-                        <input type="text" className="form-control" id="street" name="street" 
+                <fieldset>
+                    <div >
+                        <label htmlFor="street" >Street</label>
+                        <input type="text" id="street" name="street" 
                         placeholder="1 av de la République" 
                          onChange={(e)=>{handleEmployeeChange('street', e.target.value)}} required/>
                     </div>
-                    <div className="col-md-6">
-                        <label htmlFor="city" className="form-label">City</label>
-                        <input type="text" className="form-control" id="city" name="city" 
+                    <div >
+                        <label htmlFor="city" >City</label>
+                        <input type="text" id="city" name="city" 
                         placeholder="Paris" 
                          onChange={(e)=>{handleEmployeeChange('city', e.target.value)}} required/>
                     </div>
-                    <div className="col-md-6">
-                        <label htmlFor="state" className="form-label">State</label>
-                        <input type="text" className="form-control" id="state" name="state" 
+                    <div >
+                        <label htmlFor="state" >State</label>
+                        <input type="text" id="state" name="state" 
                         placeholder="France" 
                          onChange={(e)=>{handleEmployeeChange('state', e.target.value)}} required/>
                     </div>
-                    <div className="col-md-6">
-                        <label htmlFor="zipCode" className="form-label">Zip Code</label>
-                        <input type="number" className="form-control" id="zipCode" name="zipCode" 
+                    <div >
+                        <label htmlFor="zipCode" >Zip Code</label>
+                        <input type="number" id="zipCode" name="zipCode" 
                         placeholder="75000" 
                          onChange={(e)=>{handleEmployeeChange('zipCode', e.target.value)}} required/>
                     </div>
                 </fieldset>
-                <div className="col-md-6 mb-3">
-                    <label className="form-label" htmlFor="department">Department</label>
+                <div >
+                    <label  htmlFor="department">Department</label>
                     <Dropdown onChange={(value)=>{handleEmployeeChange('department', value.value)}} options={options} placeholder="Selectionnez votre département ..." />
                 </div>
-                <div className="col-12">
-                    <button className="btn btn-outline-light" type="submit" >Save</button>
+                <div >
+                    <button className="submit" type="submit" >Save</button>
                 </div>
             </form>
             <Modale modalIsOpen={modalIsOpen} setIsOpen={setIsOpen}/>

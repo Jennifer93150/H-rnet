@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 
 /** styles */
 import styled from "styled-components";
+import "../style/dataTable.css";
 
 const FilterableTableContainer = styled.div`
-    background: #85b281;
+    color: white;
     border-radius: 15px;
-    margin: 50px auto;
-    padding:30px;
-    width: 80%;
+    margin: auto;
+    padding: 30px;
+    width: 90%;
 `;
 
 export default function DataTable() {
@@ -16,7 +17,7 @@ export default function DataTable() {
     let dataStringify = localStorage.getItem('root');
     let dataParse = JSON.parse(dataStringify);
 
-    const  FilterableTable  =  require ( 'react-filterable-table' ) ;
+    const FilterableTable  =  require ('react-filterable-table') ;
   
     const  fields = [ 
         { name : 'firstName' , displayName : "FirstName" , inputFilterable : true , sortable : true } ,
@@ -28,12 +29,12 @@ export default function DataTable() {
         { name : 'city' ,  displayName : "City" ,  inputFilterable : true ,  exactFilterable : true ,  sortable : true  },
         { name : 'zipCode' ,  displayName : "ZipCode" ,  inputFilterable : true ,  exactFilterable : true ,  sortable : true  },
         { name : 'department' ,  displayName : "Department" ,  inputFilterable : true ,  exactFilterable : true ,  sortable : true  } ,
-    ] ;
+    ];
 
     return (
         <FilterableTableContainer>
             {dataParse ? (
-                < FilterableTable 
+                <FilterableTable
                     iconSort
                     namespace = "People" 
                     initialSort = "name" 
@@ -42,7 +43,6 @@ export default function DataTable() {
                     noRecordsMessage = "Il n'y a aucune personne à afficher" 
                     noFilteredRecordsMessage = "Aucune personne ne correspond à vos filtres !" 
                 />
-                
             ):(
             <div>
                 <p>Il n'y a aucune personne à afficher</p>
