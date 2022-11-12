@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 /** styles */
 import styled from "styled-components";
+import 'react-filterable-table/dist/style.css';
 import "../style/dataTable.css";
 
 const FilterableTableContainer = styled.div`
@@ -47,10 +48,10 @@ export default function DataTable() {
             <div>
                 <p>Il n'y a aucune personne à afficher</p>
                 <hr />
-                <Link to="/" className="text-decoration-none">Ajouter un employé</Link>
+                <Link to="/">Ajouter un employé</Link>
             </div>
             )}
-            <Link to="/" className="text-decoration-none">Retour</Link>
+            <Link to="/">Retour</Link>
         </FilterableTableContainer>
     );
 };

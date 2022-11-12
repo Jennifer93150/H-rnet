@@ -109,7 +109,6 @@ export default function Form(){
                     onChange={(value)=>{handleEmployeeChange('startDate', value)}} 
                     onClick={(value)=>{handleClickOnADate('startDate', value)}}/>
                 </div>   
-                <fieldset>
                     <div >
                         <label htmlFor="street" >Street</label>
                         <input type="text" id="street" name="street" 
@@ -134,7 +133,6 @@ export default function Form(){
                         placeholder="75000" 
                          onChange={(e)=>{handleEmployeeChange('zipCode', e.target.value)}} required/>
                     </div>
-                </fieldset>
                 <div >
                     <label  htmlFor="department">Department</label>
                     <Dropdown onChange={(value)=>{handleEmployeeChange('department', value.value)}} options={options} placeholder="Selectionnez votre département ..." />
