@@ -7,10 +7,9 @@ import "../style/dataTable.css";
 
 const FilterableTableContainer = styled.div`
     color: white;
-    border-radius: 15px;
     margin: auto;
-    padding: 30px;
-    width: 90%;
+    padding: 20px;
+    overflow:scroll;
 `;
 
 export default function DataTable() {

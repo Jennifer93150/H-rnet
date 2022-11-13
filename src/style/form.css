@@ -3,7 +3,6 @@ body {
   margin: 0;
   background :linear-gradient(45deg, #BB1881, #F88B50);
   font-family: sans-serif;
-  min-height: 720px;
 }
 
 form label{ 
@@ -24,12 +23,12 @@ input{
 }
  
 .container{
-  padding :2em;
+  padding :0.5em;
   box-sizing :border-box;
   transition: all 0.5s ease-in-out;
   transition-delay: 1s;
-  width: 40%;
-  margin: 80px auto 0 auto;
+  width: 60%;
+  margin: 50px auto;
 }
 
 fieldset{
@@ -47,10 +46,14 @@ fieldset{
   box-shadow :none;
   border-radius :0.25em;
   cursor :pointer;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
 
-
+@media screen and (max-width: 425px){
+  .container{
+    width: 80%;
+  }
+}
 @media screen and (max-width: 375px){
   .container{
       padding: 30px;
